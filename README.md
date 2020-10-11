@@ -14,4 +14,4 @@
   View the project in GitHub at: https://infinite-retreat-23536.herokuapp.com/
   
   ## Preview
-  ![](/readme.PNG)
+  ![](readme.png)
