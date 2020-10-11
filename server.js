@@ -59,10 +59,10 @@ app.post("/api/notes", (req, res) => {
   return res.json(savedNotes);
 });
 
-// Receives query parameter containing ID of the note to delete. 
+// query parameter containing ID of deleted note
 app.delete("/api/notes/:id", (req, res) => {
-  let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8")); // reads db.json
-  let noteID = savedNotes.filter(x => x.id != req.params.id) // returns route with all notes EXCEPT the ID we are deleting 
+  let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+  let noteID = savedNotes.filter(x => x.id != req.params.id)
   console.log("NOTE ID", noteID)
   console.log("REQ.PARAMS.ID", req.params.id)
 
@@ -76,15 +76,14 @@ app.delete("/api/notes/:id", (req, res) => {
 });
 
 
-
 //______________ HTML ROUTES ______________
 
-// returns notes.html file
+// returns notes.html
 app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
-// returns index.html file
+// returns index.html 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
