@@ -2,7 +2,7 @@
   # Note Taker 
 
   ## Description
-    An express.js application designed to allow users to write and save notes to organize thoughts and keep track of tasks.
+  An express.js application designed to allow users to write and save notes to organize thoughts and keep track of tasks.
     
   ## Table of Contents
   -[Installation](#installation) 
