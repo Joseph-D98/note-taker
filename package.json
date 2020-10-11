@@ -2,25 +2,26 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.1",
+    "uuidv4": "^6.2.4"
+  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Joseph-D98/note-taker.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Joseph-D98/note-taker/issues"
   },
-  "homepage": "https://github.com/Joseph-D98/note-taker#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "uuid": "^8.3.1",
-    "uuidv4": "^6.2.4"
-  }
+  "homepage": "https://github.com/Joseph-D98/note-taker#readme"
 }

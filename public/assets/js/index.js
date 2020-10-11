@@ -24,7 +24,7 @@ var saveNote = function(note) {
   });
 };
 
-// BONUS A function for deleting a note from the db
+// A function for deleting a note from the db
 var deleteNote = function(id) {
   return $.ajax({
     url: "api/notes/" + id,
@@ -62,7 +62,7 @@ var handleNoteSave = function() {
   });
 };
 
-// BONUS Delete the clicked note
+// Delete the clicked note
 var handleNoteDelete = function(event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
   event.stopPropagation();
@@ -106,12 +106,12 @@ var handleRenderSaveBtn = function() {
 // Render's the list of note titles
 var renderNoteList = function(notes) {
   $noteList.empty();
-
+  console.log("NOTES",(notes[0]))
   var noteListItems = [];
 
   for (var i = 0; i < notes.length; i++) {
     var note = notes[i];
-
+    console.log("NOTE", note)
     var $li = $("<li class='list-group-item'>").data(note);
     var $span = $("<span>").text(note.title);
     var $delBtn = $(
