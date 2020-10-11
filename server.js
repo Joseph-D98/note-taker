@@ -38,7 +38,7 @@ app.get("/api/notes", (req, res) => {
 
 // saves new note to db.json and returns note to client
 app.post("/api/notes", (req, res) => {
-  let savedNotes = JSON.parse(fs.readFileSync("./db/db.json"));
+  let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
   let id = crypto.randomBytes(16).toString("hex");
   let newNote = {
     title: req.body.title,
@@ -61,7 +61,7 @@ app.post("/api/notes", (req, res) => {
 
 // Receives query parameter containing ID of the note to delete. 
 app.delete("/api/notes/:id", (req, res) => {
-  let savedNotes = JSON.parse(fs.readFileSync("./db/db.json")); // reads db.json
+  let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8")); // reads db.json
   let noteID = savedNotes.filter(x => x.id != req.params.id) // returns route with all notes EXCEPT the ID we are deleting 
   console.log("NOTE ID", noteID)
   console.log("REQ.PARAMS.ID", req.params.id)
